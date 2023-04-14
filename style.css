@@ -5,3 +5,7 @@
 .nav-pills .nav-link.active {
   background-color: white;
 }
+
+.tab-content .tab-pane img {
+  height: 300px;
+}

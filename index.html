@@ -17,43 +17,346 @@
     />
     <title>Diablo</title>
   </head>
-  <body>
-    <div>
-      <header class="bg-danger">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container">
-            <h1 class="m-0 fw-bold fst-italic">Diablo</h1>
+  <body class="bg-danger-subtle">
+    <header class="bg-danger sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <h1 class="m-0 fw-bold fst-italic">Diablo</h1>
 
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#header-navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="header-navbar"
+          >
+            <ul class="navbar-nav nav-pills mt-3 mt-md-0">
+              <li class="nav-item">
+                <a
+                  href="#carousel-section"
+                  class="nav-link px-3 fs-6 fw-bold active"
+                  >História</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#story-section" class="nav-link px-3 fs-6 fw-bold"
+                  >Jogos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#buy-form" class="nav-link px-3 fs-6 fw-bold"
+                  >Comprar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="header-navbar"
+      data-bs-smooth-scroll="true"
+      tabindex="0"
+    >
+      <section id="carousel-section">
+        <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+          <div class="carousel-indicators">
             <button
-              class="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#header-navbar"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
 
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="header-navbar"
-            >
-              <ul class="navbar-nav nav-pills mt-3 mt-md-0">
-                <li class="nav-item">
-                  <a href="#" class="nav-link px-3 fs-6 fw-bold active"
-                    >História</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link px-3 fs-6 fw-bold">Jogos</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link px-3 fs-6 fw-bold">Comprar</a>
-                </li>
-              </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/slides/slide_1.jpg"
+                alt=""
+                class="d-block w-100"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="assets/slides/slide_2.jpg"
+                alt=""
+                class="d-block w-100"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="assets/slides/slide_3.jpg"
+                alt=""
+                class="d-block w-100"
+              />
             </div>
           </div>
-        </nav>
-      </header>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>
+
+      <section id="story-section" class="bg-light">
+        <div class="py-5 px-5 my-5 bg-danger">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                src="assets/diablo/diablo.jpg"
+                alt=""
+                class="d-block w-100 rounded mb-2"
+              />
+            </div>
+
+            <article class="col-md-6">
+              <h2 class="fw-bold">Sobre o Diablo</h2>
+              <p class="fs-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+                sed autem sequi libero sapiente optio impedit, itaque, adipisci
+                iste nemo iure reprehenderit expedita! Qui hic illum tempore
+                commodi! Cum, ex? Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Nam, sed autem sequi libero sapiente optio
+                impedit, itaque, adipisci iste nemo iure reprehenderit expedita!
+                Qui hic illum tempore commodi! Cum, ex? Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit. Nam, sed autem sequi libero
+                sapiente optio impedit, itaque, adipisci iste nemo iure
+                reprehenderit expedita! Qui hic illum tempore commodi! Cum, ex?
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="games-tab" class="pb-5">
+        <div class="container">
+          <ul class="nav nav-tabs gap-2" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                type="button"
+                class="nav-link text-bg-danger active"
+                data-bs-toggle="tab"
+                data-bs-target="#diablo-1"
+              >
+                Diablo
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                type="button"
+                class="nav-link text-bg-danger"
+                data-bs-toggle="tab"
+                data-bs-target="#diablo-2"
+              >
+                Diablo II
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                type="button"
+                class="nav-link text-bg-danger"
+                data-bs-toggle="tab"
+                data-bs-target="#diablo-3"
+              >
+                Diablo III
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                type="button"
+                class="nav-link text-bg-danger"
+                data-bs-toggle="tab"
+                data-bs-target="#diablo-immortal"
+              >
+                Diablo Immortal
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <article class="mt-4 tab-pane show active" id="diablo-1">
+              <h3 class="fw-bold fst-italic">Diablo I</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="assets/games/diablo_1.jpg"
+                    alt=""
+                    class="d-block w-100 rounded"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <p class="fs-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quibusdam velit pariatur aspernatur reprehenderit minus
+                    repellendus nam incidunt dolores ratione provident, error
+                    nostrum! Eum, deleniti architecto. Aliquam facilis eligendi
+                    fugiat non.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="row mt-4 tab-pane" id="diablo-2">
+              <h3 class="fw-bold fst-italic">Diablo II</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="assets/games/diablo_2.jpg"
+                    alt=""
+                    class="d-block w-100 rounded"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <p class="fs-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quibusdam velit pariatur aspernatur reprehenderit minus
+                    repellendus nam incidunt dolores ratione provident, error
+                    nostrum! Eum, deleniti architecto. Aliquam facilis eligendi
+                    fugiat non.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="row mt-4 tab-pane" id="diablo-3">
+              <h3 class="fw-bold fst-italic">Diablo III</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="assets/games/diablo_3.jpg"
+                    alt=""
+                    class="d-block w-100 rounded"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <p class="fs-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quibusdam velit pariatur aspernatur reprehenderit minus
+                    repellendus nam incidunt dolores ratione provident, error
+                    nostrum! Eum, deleniti architecto. Aliquam facilis eligendi
+                    fugiat non.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="row mt-4 tab-pane" id="diablo-immortal">
+              <h3 class="fw-bold fst-italic">Diablo Immortal</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="assets/games/diablo_immortal.jpg"
+                    alt=""
+                    class="d-block w-100 rounded"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <p class="fs-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quibusdam velit pariatur aspernatur reprehenderit minus
+                    repellendus nam incidunt dolores ratione provident, error
+                    nostrum! Eum, deleniti architecto. Aliquam facilis eligendi
+                    fugiat non.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="buy-form" class="py-3 bg-danger">
+        <div class="container">
+          <div class="row text-center">
+            <h3 class="fw-bold">Comprar</h3>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+              <b class="d-block"
+                >Preencha o formulário para ter acesso aos jogos</b
+              >
+
+              <span class="d-block mb-3"
+                >Obrigatória ser maior de 14 anos para poder comprar nossos
+                jogos*</span
+              >
+
+              <form>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control mb-2"
+                  placeholder="Nome completo"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control mb-2"
+                  placeholder="E-mail"
+                  required
+                />
+                <input
+                  type="date"
+                  name="date"
+                  class="form-control mb-2"
+                  placeholder="Data de nascimento"
+                  required
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-5 bg-dark">
+        <div class="container py-3">
+          <b class="text-danger">&copy; Diablo Games LTDA 2023</b>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
